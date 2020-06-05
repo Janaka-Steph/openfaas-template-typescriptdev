@@ -1,0 +1,5 @@
+= OpenFaas Typescript Template For Development
+
+Run your Typescript code with https://github.com/TypeStrong/ts-node[ts-node]
+
+  faas template pull https://github.com/Janaka-Steph/openfaas-template-typescriptdev
