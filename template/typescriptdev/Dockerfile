@@ -51,7 +51,7 @@ RUN chown app:app -R /home/app \
 USER app
 
 ENV cgi_headers="true"
-ENV fprocess="ts-node index.ts"
+ENV fprocess="ts-node --files --project function/tsconfig.json index.ts"
 ENV mode="http"
 ENV upstream_url="http://127.0.0.1:3000"
 

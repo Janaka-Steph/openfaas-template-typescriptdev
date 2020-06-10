@@ -1,5 +1,5 @@
 language: typescriptdev
-fprocess: ts-node index.ts
+fprocess: ts-node --files --project function/tsconfig.json index.ts
 welcome_message: |
   Use ts-node for Typescript development and the OpenFaaS of-watchdog which gives greater control over HTTP responses.
 

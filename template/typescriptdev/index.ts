@@ -6,7 +6,7 @@ import {Request, Response, Application, Query} from 'express-serve-static-core'
 import handler from './function/handler'
 import {IncomingHttpHeaders} from 'http'
 
-type Cb = (err: Error | undefined, functionResult?: any) => any
+type Cb = (err: Error | undefined, functionResult?: any) => Response
 interface IFunctionContext {
     value: number;
     cb: Cb;
@@ -18,8 +18,7 @@ interface IFunctionContext {
     fail: (value: Error) => void;
 }
 
-// @ts-ignore
-let app: Application = express()
+let app: Application = express.default()
 
 if (process.env.RAW_BODY === 'true') {
     app.use(bodyParser.raw({ type: '*/*' }))
